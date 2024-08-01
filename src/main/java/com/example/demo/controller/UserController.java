@@ -15,6 +15,7 @@ import java.util.Optional;
 @RestController
 @Slf4j
 @RequiredArgsConstructor
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class UserController {
     private final UserRepository userRepository;
 
@@ -55,6 +56,7 @@ public class UserController {
         }
         return ResponseEntity.noContent().build();
     }
+
 
     @PutMapping("/{id}")
     public ResponseEntity<User> updateUser(@PathVariable Long id, @RequestBody User user) {

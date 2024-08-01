@@ -16,4 +16,5 @@ public class OpenApiConfig {
                         .description("RESTful API + JPA 구현 및 배포")
                 );
     }
+
 }
